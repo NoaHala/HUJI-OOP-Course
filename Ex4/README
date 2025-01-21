@@ -1,0 +1,22 @@
+noahalaly
+322875832
+
+Questions:
+1. class in the package 'trees' and the connections between them:
+    a. 'Flora' - as required at the instructions, this object contains a static
+     method which creates all the flora's object ia a given range for a specific
+     run of the game.
+    b. 'AvatarObservers' - an abstract class that extends 'GameObject' to specify
+     that a game object is an observer of the avatar game object and it should
+      also implement a matching update method.
+    c. 'Leaf', 'Fruit', 'TreeTrunk' - all the game objects for creating the flora.
+     all of them extends the abstract class 'AvatarObservers', and updates
+     themselves when the avatar jump.
+
+2. Design Pattern - Observer:
+    in this project i used 'observer' with the abstract class 'AvatarObservers'.
+    the concrete classes the implements it are - 'Leaf', 'Fruit', 'TreeTrunk'.
+    all of those, gets an update from the 'Avatar' object, whenever it jumps,
+    and activates a transition.
+    the class that contains the observer collection and the notifyObservers
+    method is 'Avatar'
