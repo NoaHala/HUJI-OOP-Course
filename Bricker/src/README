@@ -1,0 +1,18 @@
+noahalaly
+322875832
+
+questions:
+1. To remove bricks in the game, I created an instance of BrickerGameManager
+ in the constructor of BasicCollisionStrategy and used its public methods.
+    * The advantages:
+        leaving the sole responsibility for adding and deleting bricks, as well
+        as monitoring these actions (actions related to the management of the
+        game), in the game manager (encapsulation). Thus, we can limit the
+        'add' or 'remove' operations and analyze them. In addition, if we want
+        to extend the game in the future, an external and unsupervised change
+        in the amount of bricks may cause disruptions in the game, which will
+        be difficult to find.
+    * Disadvantages:
+        Creating an instance of BrickerGameManager in another class still breaks
+        encapsulation to a certain extent and creates external involvement in
+        internal operations of the game.
